@@ -4,8 +4,8 @@
     margin: 50px auto;
     padding: 5px;
     background-color: #d5cfc7;
-    border: 3px solid black;
     border-radius: 10px;
+    box-shadow: 7px 10px 23px 0 #7e7e7e;
 }
 
 .total {
@@ -42,24 +42,31 @@
     box-shadow: 0 10px #222121;
 }
 
-.row div:active{
-    /*background-color: #417cb8;*/
+.row div:active {
     box-shadow: 0 5px #222121;
     transform: translateY(5px);
 }
 
-.operation-equal {
+div.operation-equal {
     position: absolute;
-    height: 108px !important;
+    height: 72px;
+    padding-top: 43px;
     right: 10px;
     z-index: 2;
 }
 
-.number-zero {
-    width: 104px !important;
+div.number-zero {
+    width: 104px;
 }
 
-.operation-clear,
-.operation-clear-entry {
+div.operation-clear,
+div.operation-clear-entry {
     background-color: #a72d45;
+    box-shadow: 0 10px #671c2a;
+}
+
+div.operation-clear:active,
+div.operation-clear-entry:active {
+    box-shadow: 0 5px #671c2a;
+    transform: translateY(5px);
 }
