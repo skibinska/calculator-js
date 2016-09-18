@@ -1,4 +1,5 @@
 var Calculator = (function (document) {
+    'use strict';
 
     var Calculator = function (calculatorSelector) {
 
@@ -15,11 +16,13 @@ var Calculator = (function (document) {
             number7Element,
             number8Element,
             number9Element,
+            numberPeriod,
             operationAddition,
             operationSubtraction,
             operationMultiplication,
             operationDivision,
             operationClear,
+            operationClearEntry,
             operationEqual
             ;
 
@@ -71,6 +74,11 @@ var Calculator = (function (document) {
             } else if (operation === 'AC') {
                 totalElement.innerHTML = '';
                 steps = [];
+            } else if (operation === 'CE') {
+                var removeLastEntry = steps.pop();
+                console.log(removeLastEntry);
+                totalElement.innerHTML =  steps.join('');
+
             } else {
                 addOperationToSteps(operation);
             }
@@ -103,6 +111,7 @@ var Calculator = (function (document) {
             number7Element.addEventListener('click', numberHandler.bind(null, 7));
             number8Element.addEventListener('click', numberHandler.bind(null, 8));
             number9Element.addEventListener('click', numberHandler.bind(null, 9));
+            numberPeriod.addEventListener('click', numberHandler.bind(null, '.'));
 
             operationAddition.addEventListener('click', operationHandler.bind(null, '+'));
             operationSubtraction.addEventListener('click', operationHandler.bind(null, '-'));
@@ -110,9 +119,9 @@ var Calculator = (function (document) {
             operationDivision.addEventListener('click', operationHandler.bind(null, '/'));
 
             operationClear.addEventListener('click', operationHandler.bind(null, 'AC'));
+            operationClearEntry.addEventListener('click', operationHandler.bind(null, 'CE'));
             operationEqual.addEventListener('click', operationHandler.bind(null, '='));
         }
-
 
         function setElements() {
 
@@ -128,6 +137,7 @@ var Calculator = (function (document) {
             number7Element = findByClassName('number-seven');
             number8Element = findByClassName('number-eight');
             number9Element = findByClassName('number-nine');
+            numberPeriod = findByClassName('number-period');
 
             operationAddition = findByClassName('operation-addition');
             operationSubtraction = findByClassName('operation-subtraction');
@@ -135,6 +145,7 @@ var Calculator = (function (document) {
             operationDivision = findByClassName('operation-division');
 
             operationClear = findByClassName('operation-clear');
+            operationClearEntry = findByClassName('operation-clear-entry');
             operationEqual = findByClassName('operation-equal');
 
         }

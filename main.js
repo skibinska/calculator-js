@@ -1,10 +1,8 @@
-var calc, calc2;
-
 (function (document) {
+    'use strict';
 
     document.addEventListener('DOMContentLoaded', function () {
-        calc = new Calculator('calculator');
-        calc2 = new Calculator('calculator2');
+        var calculator = new Calculator('calculator');
     });
 
 })(document);
