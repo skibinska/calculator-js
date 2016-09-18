@@ -1,0 +1,30 @@
+.calculator{
+    width: 310px;
+    height: 460px;
+    margin: 10px auto;
+    padding: 5px;
+    background-color: #999;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.total{
+    height: 70px;
+    width: 300px;
+    margin: 0 0 5px 0;
+    padding: 0 5px;
+    background-color: #fff;
+    text-align: right;
+    font-size: 60px;
+}
+
+.row div {
+    cursor: pointer;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    float: left;
+    border: 2px solid black;
+    font-size: 39px;
+    padding: 10px;
+}
