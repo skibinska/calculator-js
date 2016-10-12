@@ -39,12 +39,12 @@
     background-color: #3d3d3d;
     color: #fff;
     border: none;
-    box-shadow: 0 10px #222121;
+    box-shadow: 0 5px #222121;
 }
 
 .row div:active {
-    box-shadow: 0 5px #222121;
-    transform: translateY(5px);
+    box-shadow: 0 3px #222121;
+    transform: translateY(3px);
 }
 
 div.operation-equal {
@@ -62,11 +62,11 @@ div.number-zero {
 div.operation-clear,
 div.operation-clear-entry {
     background-color: #a72d45;
-    box-shadow: 0 10px #671c2a;
+    box-shadow: 0 5px #671c2a;
 }
 
 div.operation-clear:active,
 div.operation-clear-entry:active {
-    box-shadow: 0 5px #671c2a;
-    transform: translateY(5px);
+    box-shadow: 0 3px #671c2a;
+    transform: translateY(3px);
 }
